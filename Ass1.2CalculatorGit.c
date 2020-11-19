@@ -1,51 +1,54 @@
+//######################This is a Calculator That can do multiple operations using fload numbers#########
+//######################Diamantopoulos Stylianos 494002##################################################
 #include<stdio.h>
-#include<stdio.h>
-int Addition (int,int);
-int Subtraction (int,int);
-int Multiplication(int,int);
-int Devision (int,int);
-int Modulo (int,int);
+#include<math.h>
+float Addition (float,float);
+float Subtraction (float,float);
+float Multiplication(float,float);
+float Devision (float,float);
+float Modulo (float,float);
+float operation;
+float num1;
+float num2;
+float result;
+float x;
+float y;
+float z;
 
 
-int Addition(int x, int y)
+float Addition(float x, float y)
 {
-    int z;
+    float z;
     z=(x+y);
     return(z);
 }
-int Subtraction(int x, int y)
+float Subtraction(float x, float y)
 {
-    int z;
+    float z;
     z=(x-y);
     return(z);
 }
-int Multiplication(int x, int y)
+float Multiplication(float x, float y)
 {
-    int z;
+    float z;
     z=(x*y);
     return(z);
 }
-int Devision(int x, int y)
+float Devision(float x, float y)
 {
-    int z;
+    float z;
     z=(x/y);
     return(z);
 }
-int Modulo(int x, int y)
+float Modulo(float x, float y)
 {
-    int z;
-    z=(x%y);
+    float z;
+    z=fmod(x,y);
     return(z);
 }
 int main () //Set the Enviroment for the user to interact
 {
-    int operation;
-    int num1;
-    int num2;
-    int result;
-    int x;
-    int y;
-    int z;
+
 
     printf("CALCULATOR\n");
     printf("Press 1 for Addition\n");
@@ -57,48 +60,44 @@ int main () //Set the Enviroment for the user to interact
 
 start:
     printf("\nWhat operation you want to do\n");
-    scanf("%d",&operation);
+    scanf("%f",&operation);
     if (operation == 0)
     {
         printf("See Y Layer");
         return 0 ;
     }
 
-
-
-
-
     if (operation>0 && operation<=5)
     {
         printf("Please FirstNo:\n");
-        scanf("%d",&num1);
-        printf("num1 is%d\n",num1);
+        scanf("%f",&num1);
+        ;
         printf("Please Second:\n");
-        scanf("%d",&num2);
+        scanf("%f",&num2);
 
 
         if (operation==1)
         {
             result=Addition(num1,num2);
-            printf("Result: %d + %d = %d \n",num1,num2,result);
+            printf("Result: %f + %f = %f \n",num1,num2,result);
             goto start;
         }
         else if (operation==2)
         {
             result=Subtraction(num1,num2);
-            printf("Result: %d - %d = %d \n",num1,num2,result);
+            printf("Result: %f - %f = %f \n",num1,num2,result);
             goto start;
         }
         else if (operation==3)
         {
             result=Multiplication(num1,num2);
-            printf("Result: %d * %d = %d \n",num1,num2,result);
+            printf("Result: %f * %f = %f \n",num1,num2,result);
             goto start;
         }
         else if (operation==4)
         {
             result=Devision(num1,num2);
-            printf("Result: %d / %d = %d \n",num1,num2,result);
+            printf("Result: %f / %f = %f \n",num1,num2,result);
             goto start;
         }
         else if (operation==5)
@@ -107,7 +106,7 @@ start:
             if (num2!=0)
             {
                 result=Modulo(num1,num2);
-                printf("Result: %d mod %d = %d \n",num1,num2,result);
+                printf("Result: %f mod %f = %f \n",num1,num2,result);
                 goto start;
 
             }
@@ -122,7 +121,7 @@ start:
     }
     else
     {
-        printf("InvalidInput pleaze Try again\n");
+        printf("InvalidInput please Try again\n");
         goto start;
     }
 
