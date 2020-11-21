@@ -9,31 +9,31 @@ float Addition(float x, float y)
 {
     float z;
     z=(x+y);
-    return(z);
+    return z;
 }
 float Subtraction(float x, float y)
 {
     float z;
     z=(x-y);
-    return(z);
+    return z;
 }
 float Multiplication(float x, float y)
 {
     float z;
     z=(x*y);
-    return(z);
+    return z;
 }
 float Devision(float x, float y)
 {
     float z;
     z=(x/y);
-    return(z);
+    return z;
 }
 float Modulo(float x, float y)
 {
     float z;
     z=fmod(x,y);
-    return(z);
+    return z;
 }
 int main () //Set the Enviroment for the user to interact
 {
